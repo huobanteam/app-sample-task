@@ -1,0 +1,42 @@
+/* 加入工作区 */
+.hb_workspaces_side { padding-bottom: 100px;
+
+	.paytips { margin-bottom: 20px;
+		a { display: block; position: relative; padding-right: 20px; height: 50px; line-height: 50px; border-bottom: 1px solid @bd-subtle;
+			span { color: @x-common; }
+			em { .y;
+				&.expire { color: #D0021B!important; }
+				&.countdown { color: #108DD0!important; }
+			}
+			&:after { content: "\e60c"; .hbicon; position: absolute; top: 16px; right: 0; font-size: 16px; line-height: 16px; color: @x-slate; }
+		}
+	}
+	.invite_tips { margin-bottom: 30px; padding: 10px 15px; background: #FAFAE9; border: 1px solid #E2E2D8; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08); .radius(3px);
+		p { color: @x-alert;
+			a { color: @x-link; }
+		}
+	}
+	.mod_member { 
+		.member_title { margin-bottom: 10px;
+			strong { font-weight: 400; color: @x-subtle; }
+		}
+		.member_body { position: relative;
+			.drag_box { position: absolute; top: 0; right: 0; left: 0; border: 0; background: rgba(255, 255, 255, 0.6); height: 100%; z-index: 1; }
+		}
+		.mod_avatarlist { margin-bottom: 12px; 
+			li { width: 98px; box-sizing: border-box; -webkit-box-sizing: border-box;
+				.mod_avatar span { width: 73px; }
+			}
+		}
+		.member_tips { margin-bottom: 20px; padding: 25px 0 25px 86px; position: relative;
+			&:after { content: '\e630'; .hbicon; position: absolute; left: 30px; top: 18px; font-size: 36px; color: #CCE6F3; }
+			p { font-size: 14px; }
+		}
+	}
+	.action { 
+		.pn { width: 100%; margin-bottom: 10px; }
+		a { color: @x-subtle;
+			i { .hbicon; margin-right: 3px; padding: 0 2px; color: @x-slate; }
+		}
+	}
+}

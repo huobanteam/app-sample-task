@@ -1,0 +1,50 @@
+.hb_workspaces { visibility: hidden; background: @bg-thead; position: fixed; left: 0; right: 0; z-index: 810; -webkit-transition: all .2s;
+	.workspaces_h { padding: 24px 0 30px 0; text-align: center; cursor: pointer;
+		span { display: inline-block; padding: 0 30px; height: 24px; line-height: 24px; font-size: 16px; }
+		p { color: @x-subtle; font-size: 12px; }
+	}
+	.workspaces_c { padding: 0 80px 20px 80px;
+		.workspace_add { display: inline-block; vertical-align: top; border: 2px dashed @bd-common; width: 140px; height: 180px; box-sizing: border-box; border-radius: 2px 8px 8px 2px; text-align: center; background: none; box-shadow: none; cursor: pointer;
+			i { display: block; margin: 60px auto 0; .hbicon; font-size: 32px; height: 36px; line-height: 36px; color: @x-slate; }
+			span { margin-top: 5px; display: block; color: @x-subtle; }
+
+			&:hover { border-color: @x-slate; }
+		}
+	}
+	
+}
+
+.mod_workspaces { .listStyle; display: inline;
+	li { display: inline-block; margin: 0 20px 20px 0; width: 140px; height: 180px; cursor: pointer; 
+		&:hover {
+			.mod_cover {  }
+		}
+	}
+}
+
+.mod_box { margin: 150px auto 0; width: 400px; min-height: 360px;
+	.box_logo { height: 60px; .bgIcon(50%,0,no-repeat,120px,logo); display: block; margin: 0 auto; }
+	.box_tips { margin-bottom: 15px; height: 32px; line-height: 32px; background: #FAFAE9; border: 1px solid #E2E2D8; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08); box-sizing:border-box; -webkit-box-sizing:border-box; .radius(3px); text-align: center; color: @colorRed; }
+	.box_body { padding: 40px; background-color: @c-white; box-shadow: 0 0 6px rgba(0, 0, 0, 0.1); border-radius: 3px; }
+
+	fieldset { margin: 0; padding: 0; border: none; border-top: 1px solid #ECECEC;
+		legend { margin-bottom: 40px; padding: 0 10px; font-size: 14px; text-align: center; color: @x-subtle; }
+		
+		p { margin-bottom: 25px; display: block; overflow: hidden;}
+			.px { height: 36px; }
+			.pn { width: 100%; }
+		
+	}
+	.message { margin:0 auto; padding: 20px 0; width: 250px; padding-left: 72px; box-sizing: border-box; -wibkit-box-sizing: border-box; 
+		i { .hbicon; .z; margin-left: -56px; margin-top: -10px; font-size: 44px; color: #56B95B; 
+			&.error { color: @bg-alert;}
+		} 
+		p { margin-bottom: 2px; font-size: 12px;
+			strong { font-size: 16px; font-weight:400; } 
+			a { color: @x-subtle; }
+		}
+		
+
+	}
+	
+}

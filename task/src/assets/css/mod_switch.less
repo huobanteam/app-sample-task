@@ -1,0 +1,29 @@
+/* 切换显示隐藏
+.mod_switch { display: inline-block; border: 1px solid @bg-action; width: 60px; height: 24px; line-height: 24px; .radius(12px); box-sizing: border-box; -webkit-box-sizing: border-box; color: @x-slate; font-size: 12px; text-align: center; cursor: pointer; .animate;
+	em { .z; margin-left: 12px; }
+	&:after { content: ''; .y; display: inline-block; margin-top: 6px; margin-right: 6px; width: 10px; height: 10px; .radius(10px); background: @bg-action; text-decoration: none; }
+	&.switch_off { border-color: @bd-common; color: @bd-common;
+		em { .y; margin-right: 12px; margin-left: 0; }
+		&:after { .z; background: @bd-common; margin-left: 6px; margin-right: 0; }
+	}
+}
+ */
+
+ .pn_switch { position: relative; display: inline-block; border: 1px solid @bg-action; height: 24px; line-height: 24px; .radius(12px); box-sizing: border-box; -webkit-box-sizing: border-box; color: @x-slate; font-size: 12px; cursor: pointer; .animate; -moz-user-select:none; -webkit-user-select: none;
+	.checkbox { position: absolute; top: 6px; margin-left: -16px; left: 100%; width: 10px; height: 10px; .radius(10px); background: @bg-action; .animate; }
+	em { .z; height: 22px; line-height: 22px; overflow: hidden;
+		&.on { padding: 0 20px 0 10px; width: auto; .opacity(100,1); .animate; }
+		&.off { padding: 0; width: 0px; .opacity(0,0); .animate; }
+	}
+
+	&.pn_switch_off { border-color: @bd-common; color: @bd-common;
+		.checkbox { left: 6px; margin-left: 0; background: @bd-common; }
+		em { .z;
+			&.on { padding: 0; width: 0px; .opacity(0,0); }
+			&.off { padding: 0 10px 0 20px; width: auto; .opacity(100,1); }
+		}
+		&:hover { border: 1px solid @bg-action; }
+	}
+	
+	
+}

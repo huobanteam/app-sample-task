@@ -1,0 +1,28 @@
+.public_fixedDataTable_main {
+  border: none;
+}
+.custom_cell {
+  border: none;
+  border-bottom: 1px solid #EEECEC;
+  background: #FFF!important;
+  font-size: 12px;
+  color: #4B4B4B;
+}
+.checked .custom_cell {
+  background: #F6F7FF!important;
+}
+.custom_title {
+  font-size: 14px;
+  color: #3B65A7;
+  padding-left: 8px;
+}
+.public_fixedDataTableCell_cellContent {
+  font-size: 12px;
+  color: #9DA1C4;
+  font-weight: 400;
+  padding: 0 8px;
+}
+.public_fixedDataTable_header,
+.fixedDataTable_hasBottomBorder {
+  border-bottom: 1px solid #EEECEC;
+}

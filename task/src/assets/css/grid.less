@@ -1,0 +1,40 @@
+/* 栅格 */
+.hb_row { }
+.col_1,.col_2, .col_3, .col_4, .col_5, .col_6, .col_7,  .col_8,.col_9, .col_10, .col_11,  .col_12 { .z; position: relative; min-height: 1px; }
+.col_12 { width: 100%; }
+.col_11 { width: 91.66666667%; }
+.col_10 { width: 83.33333333%; }
+.col_9 { width: 75%; }
+.col_8 { width: 66.66666667%; }
+.col_7 { width: 58.33333333%; }
+.col_6 { width: 50%; }
+.col_5 { width: 41.66666667%; }
+.col_4 { width: 33.33333333%; }
+.col_3 { width: 25%; }
+.col_2 { width: 16.66666667%; }
+.col_1 { width: 8.33333333%; }
+
+
+
+.hb_app { 
+	.hb_row { padding-left: 200px; box-sizing: border-box; .animate;
+		.col_2 { margin-left: -200px; width: 200px; .z; position: static; overflow: hidden; }
+		.col_10 { width: 100%; position: static; overflow: hidden; box-sizing: border-box; }
+		&.hide_col_2 { padding-left: 0px;
+			.col_2 { display: none; }
+			.col_10 { padding-left: 0px; }
+		}
+	}
+}
+
+.app_item, .hb_item {
+
+		.hb_row { padding-left: 200px; box-sizing: border-box;
+			.col_2 { margin-left: -200px; width: 200px; .z; position: static; overflow: hidden; }
+			.col_10 { width: 100%; position: static; overflow: hidden; box-sizing: border-box; }
+			&.hide_col_2 { padding-left: 0px;
+				.col_2 { display: none; }
+				.col_10 { padding-left: 0px; }
+			}
+		}
+}

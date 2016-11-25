@@ -1,0 +1,56 @@
+.z { float: left; }
+.y { float: right; }
+
+.cl:after { content: ""; display: block; height: 0; clear: both; visibility: hidden; } .cl { zoom: 1; }
+
+.listStyle { list-style: none; }
+/* 图标图 */
+.bgIcon(@x:0,@y:0,@repeat:no-repeat,@size:50px,@file:icon,@color:transparent) { background: @color ~"url(../../assets/images/system/@{file}.png)" @repeat @x @y;
+	@media only screen and (-webkit-min-device-pixel-ratio: 2),only screen and (min--moz-device-pixel-ratio: 2),only screen and (-o-min-device-pixel-ratio: 2/1),only screen and (min-device-pixel-ratio: 2) {
+		background-image: ~"url(../../assets/images/system/@{file}@2x.png)"; background-size: @size auto;
+	}
+}
+.bgAtt( @x:0,@y:0,@color:transparent ) { background: @color url("../../assets/images/common/attachment.png") no-repeat @x @y;
+	@media only screen and (-webkit-min-device-pixel-ratio: 2),only screen and (min--moz-device-pixel-ratio: 2),only screen and (-o-min-device-pixel-ratio: 2/1),only screen and (min-device-pixel-ratio: 2) {
+		background-image: url("../../assets/images/common/attachment@2x.png"); background-size: 12px auto;
+	}
+}
+
+.pipe { margin: 0 5px; }
+
+/*滚动条*/
+.scroll { overflow-y: auto; overflow-x: hidden; -webkit-overflow-scrolling: touch; }
+
+/* 动画 */
+.animate(@duration:.2s,@animation: ease-out,@property:all,@delay:0s) {
+	transition: @property @duration @animation @delay;
+	-moz-transition: @property @duration @animation @delay;
+	-webkit-transition: @property @duration @animation @delay;
+	-o-transition: @property @duration @animation @delay;
+}
+
+
+/* 透明度 */
+.opacity( @ie:50,@num:0.5 ) { filter: alpha(opacity=@ie); -moz-opacity: @num; -khtml-opacity: @num; opacity: @num;}
+
+.ghost { .opacity(0,0); }
+
+
+/* 圆角 */
+.radius( @radius:100px) { border-radius: @radius; -webkit-border-radius: @radius; -moz-border-radius: @radius; }
+
+/* 头像 */
+.avatar { .radius; box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3) }
+
+hr.line { margin: 0; height: 1px; border: none; border-top: 1px solid @bd-subtle;}
+
+.text_ellipsis { overflow: hidden; display: block; white-space: nowrap; -o-text-overflow: ellipsis; text-overflow: ellipsis; }
+
+/* 图片等比例缩放 参数不包含单位 */
+.imgZoom(@size) { max-width:~"@{size}px"; max-height:~"@{size}px"; width:~"expression(this.width>@{size}&&this.width>this.height?@{size}:auto)"; height:~"expression(this.height>@{size}?@{size}:auto)"; }
+
+/*进度条*/
+.progress { margin: 6px 8px 3px 0; background: #DFE1E9; font-size: 0; border-radius: 16px; box-shadow: inset 0 1px 1px rgba(0,0,0,.1);
+	.progress_len { background: #64E28B; font-size: 0; border-radius: 16px; box-shadow: inset 0 1px 1px rgba(0,0,0,.1); } 
+}
+

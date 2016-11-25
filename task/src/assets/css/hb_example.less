@@ -1,0 +1,34 @@
+.hb_example { width: 900px; margin: 0 auto;
+	.example_table { background: #F8FAFE;
+		.row_td, .row_th, .row_head { padding: 20px 40px 20px 20px; box-sizing: border-box;
+		}
+		.row_th { width: 25%; border-right: 2px solid #FFF;
+			.example_code { margin-top: 10px; display: none;
+				textarea { width: 170px; height: 120px; }
+			}
+		}
+		.row_td {
+			.example_code { margin-top: 10px; display: none;
+				textarea { width: 650px; height: 220px; }
+			}
+			.hb_dialog,.tip_card { position: static; margin-bottom: 50px; }
+			.popover { position: relative; }
+			.example_t { color: #91B6AF; }
+			.example_n { color: #F00; }
+			.hb_dialog { position: static; margin-bottom: 50px; }
+
+			.popover { position: relative; margin-bottom: 50px; display: block; }
+
+			.tip_card { position: static; margin-bottom: 50px; }
+		}
+
+		.row:nth-of-type(even){ background: #F1F4F9; } /*偶数行*/
+
+		thead .row_head { text-align: center; font-size: 16px; font-weight: 700; background: #373544; color: #FFF;
+			span { font-size: 12px; margin-left: 20px; color: #ccc;}
+		}
+	}
+	.hb_example_menu { position: fixed; left: 50px; top: 50px; width: 120px;
+		li { line-height: 32px; height: 32px; font-size: 14px; }
+	}
+}

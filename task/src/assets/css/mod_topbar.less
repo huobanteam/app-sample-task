@@ -1,0 +1,180 @@
+.topbar { position: fixed; top: -220px; left: 50%; margin-left: -270px; width: 540px; border: 1px solid #D5D5D5; background: @c-white; z-index: 799; box-shadow: 0 0 4px rgba(0, 0, 0, 0.2); .animate;
+	&.movedown { top: 79px; }
+	dl { padding: 30px 30px 30px 200px;
+		&.admin {
+			dd {
+				.tb_title {
+					.px { display: block; }
+					p.title { display: none; }
+				}
+				.tb_body { height: 142px; }
+			}
+		}
+		.pipe { margin: 0 10px; color: #ECECEC; }
+		dt { .z; margin-left: -170px;
+			.mod_cover { margin-bottom: 10px;
+				h3 { }
+				img.photo { width: auto; height: auto; bottom: auto; }
+				.cover_progress { position: absolute; bottom: 0; width: 100%; text-align: center; font-size: 12px; box-sizing: border-box; height: 140px; line-height: 180px; background-color: rgba(0, 0, 0, 0.3); color: rgba(255, 255, 255, 0.8); z-index: 1;
+					em { font-size: 12px; }
+				}
+			}
+			.tb_btn { height: 22px; line-height: 22px; text-align: center; }
+			.tb_adjust { margin-top: -2px;
+				.pn { .y; width: 42px; height: 22px; line-height: 22px; font-size: 12px; padding-left: 0; padding-right: 0; }
+				.pn_range { margin-top: 8px; }
+			}
+		}
+		dd {
+			.tb_body{ height: 122px; 
+				.creatdate { color: @x-subtle; }
+				.xmas { padding-left: 80px; padding-top: 15px; display: block;
+					.xmas_photo { .z; margin-left: -80px; width: 80px;
+						img { width: 80px; height: 90px; }
+					}
+					.xmas_body { overflow: hidden; padding-left: 20px;
+						h3 { margin-bottom: 4px;
+							strong { font-size: 14px; color: #D72F32; text-decoration: underline; }
+							img.icon { width: 26px; height: 24px; position: relative; top: 3px; }
+						}
+						p { color: #417505;
+							strong { color: #D72F32; font-weight: 400; }
+						}
+					}
+				}
+			}
+			.tb_title { padding-top: 5px; margin-bottom: 10px;
+				p.title { font-size: 14px; display: block; .text_ellipsis; }
+				.px { display: none; height: 31px; }
+			}
+			.tb_info { height: 59px;
+				p { line-height: 24px; font-size: 14px;
+					strong { font-weight: 400; }
+					em { .y;
+						a { color: #108DD0;
+							&:hover { color: #108DD0!important; }
+						}
+					}
+					&.datetime { color: #AEB4BF; font-size: 12px; }
+				}
+			}
+			.tb_progress { margin-bottom: 14px;
+				label {
+					strong { margin: 0 2px; color: #A2AEE5; }
+					em { margin: 0 2px; }
+				}
+				.progressbar { height: 6px; font-size: 0; border-radius: 100px; background: #ECECEC;
+					span { display: block; height: 6px; border-radius: 100px; background: #A2AEE5; }
+				}
+			}
+			.tb_btn { height: 20px; line-height: 20px;
+				a { margin-right: 20px;
+					i { .hbicon; font-size: 16px; top: 2px; margin-right: 5px; color: @x-slate; }
+				}
+			}
+		}
+	}
+
+	input[type=range] {
+	    /*removes default webkit styles*/
+	    -webkit-appearance: none;
+	    /*fix for FF unable to apply focus style bug */
+	    // border: 1px solid white;
+	    /*required for proper track sizing in FF*/
+	    width: 80px;
+
+	    margin: 0;
+	}
+	input[type=range]::-webkit-slider-runnable-track {
+	    width: 80px;
+	    height: 8px;
+	    background-color: @bg-current;
+	    border: none;
+	    border-radius: 8px;
+	}
+	input[type=range]::-webkit-slider-thumb {
+	    -webkit-appearance: none;
+	    border: 1px solid #9DA1C4; 
+	    height: 16px;
+	    width: 16px;
+	    border-radius: 50%;
+	    background: @c-white;
+	    margin-top: -4px;
+	}
+	input[type=range]:focus {
+	    outline: none;
+	}
+	input[type=range]:focus::-webkit-slider-runnable-track {
+	    background-color: @bg-current;
+	}
+	input[type=range]::-moz-range-track {
+	    width: 80px;
+	    height: 8px;
+	    background-color: @bg-current;
+	    border: none;
+	    border-radius: 8px;
+	}
+	input[type=range]::-moz-range-thumb {
+	    border: none;
+	    height: 16px;
+	    width: 16px;
+	    border-radius: 50%;
+	    background: @c-white;
+	    border: 1px solid #9DA1C4; 
+	}
+	/*hide the outline behind the border*/
+	input[type=range]:-moz-focusring{
+	    outline: 1px solid white;
+	    outline-offset: -1px;
+	}
+
+	input[type=range]::-ms-track {
+	    width: 80px;
+	    height: 8px;
+	    /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+	    background: transparent;
+	    
+	    /*leave room for the larger thumb to overflow with a transparent border */
+	    border-color: transparent;
+	    border-width: 6px 0;
+
+	    /*remove default tick marks*/
+	    color: transparent;
+	}
+	input[type=range]::-ms-fill-lower {
+	    background-color: @bg-current;
+	    border-radius: 8px;
+	}
+	input[type=range]::-ms-fill-upper {
+	    background: #ddd;
+	    border-radius: 10px;
+	}
+	input[type=range]::-ms-thumb {
+	    border: none;
+	    height: 16px;
+	    width: 16px;
+	    border-radius: 50%;
+	    background: @c-white;
+	    border: 1px solid #9DA1C4;
+	}
+	input[type=range]:focus::-ms-fill-lower {
+	    background-color: @bg-current;
+	}
+	input[type=range]:focus::-ms-fill-upper {
+	    background-color: @bg-current;
+	}
+}
+
+
+.mod_cover { position: relative; width: 140px; height: 180px; overflow: hidden; background: #D8E1F0; box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+	h3 { position: absolute; top: 38px; width: 100%; padding: 10px 14px; font-size: 14px; font-weight: 400; z-index: 1; text-align: left; box-sizing: border-box; word-break: break-all;
+		&.arow { padding: 0 14px; height: 40px; line-height: 40px; font-size: 16px; overflow: hidden; }
+	}
+	img.photo { position: absolute; bottom: 0; width: 140px; }
+	span.bl { position: absolute; left: 0; top: 0; width: 2px; height: 180px; font-size: 0; background: rgba(0, 0, 0, 0.2); z-index: 2; }
+	span.br { position: absolute; right: 0; top: 0; width: 2px; height: 180px; font-size: 0; background: rgba(255, 255, 255, 0.8); z-index: 2; }
+	&.c_business {
+		h3 { top: 0; background-color: #979392; }
+	}
+}
+

@@ -1,0 +1,287 @@
+/*
+	主框架文件
+*/
+
+/* 页面最小宽度设置 */
+.min_width { min-width: 1240px!important; box-sizing: border-box; }
+.hb_header, .hb_main, .hb_setting, .hb_app, .hb_item, .hb_item_edit { .min_width; }
+
+@media only screen and (max-width:1240px) {
+	.switch_notice { right: auto!important; left: 1186px; }
+}
+
+
+
+.hb_wrap { }
+.hb_wrap_bg { background: #F3F6F8; overflow-y: auto; }
+.hb_main { margin-top: 80px; position: absolute; top: 0; bottom: 0; width: 100%; background: @c-white; visibility: visible; .animate(.2s,ease-out);
+	.hb_frame { margin: 0 auto; padding: 30px 0 50px; width: 940px; background: @c-white; box-sizing: border-box; }
+}
+.hb_appmenu { margin: 0 auto; background: @c-white; width: 940px; box-sizing: border-box; }
+.hb_app { position: absolute; top: 210px; left: 0; right: 0; padding: 0px; background: @c-white; visibility: hidden; .opacity(0,0); .animate; box-sizing: border-box; min-width: 1280px;
+	.pn_add { padding: 0 20px 0 17px; height: 28px; line-height: 26px; border-radius: 3px; font-size: 12px; margin: 11px 0 0 10px;  box-sizing: border-box; -webkit-box-size: border-box; .text_ellipsis; 
+		i { .hbicon; .z; top: -1px; font-size: 16px; margin-right: 1px; }
+		span { overflow: hidden; }
+	}
+}
+.hb_frame { background: @c-white; }
+.hb_item { display: none; }
+// .hb_daily { display: none; }
+
+.hb_item_edit { display: none; }
+
+.hb_setting { margin-top: 80px; .animate; overflow: hidden; background: #F9FAFB;
+
+	.hb_cancel {  display: none; position: fixed; left: 36px; top: 23px; z-index: 801;
+		.pn { padding: 0 30px; }
+	}
+	.hb_close { display: none; position: fixed; right: 36px; top: 26px; z-index: 801; }
+
+}
+
+.hb_mask { display: none; position: absolute; right: 0; top: 0; bottom: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255,255,255,0.7); z-index: 801; .animate;
+	&.mask_level { background: rgba(240,240,240,0.85); z-index: 998; }
+	.loader { margin-top: 260px; }
+}
+
+// .opacity(80,0.8); -webkit-filter: grayscale(.5); filter: grayscale(.5);
+.hb_mask_item { display: none; position: absolute; right: 0; top: 0; bottom: 0; left: 0; width: 100%; height: 100%; z-index: 801; .opacity(0,0); .animate(.1s,ease-out,all,0s);
+	&.color_a, &.color_b, &.color_c, &.color_d, &.color_e, &.color_f, &.color_g, &.color_h, &.color_i, &.color_j, &.color_k, &.color_l, &.color_m, &.color_n, &.color_o, &.color_p { border: none; }
+	&.color_default { background-color: @x-slate; }
+	.mask_item_body { position: absolute; top: 80px; left: 0; right: 0; bottom: 0; width: 100%; background: @c-white; z-index: 801; .animate(.1s,ease-out,all,0s); }
+	&.hb_mask_item_animate { .opacity(100,1);
+		.mask_item_body { top: 8px; }
+	}
+}
+
+.mask_mobile { position: fixed; top: 0; right: 0; bottom: 0; left: 0; background-image: url(../../assets/images/system/mask_android.png); background-color: rgba(0, 0, 0, 0.75);  background-position: 100% 10px;  background-repeat: no-repeat; background-size: 100% auto; z-index: 9999;
+	&.mask_ios { background-image: url(../../assets/images/system/mask_ios.png); }
+	&.mask_android { }
+}
+
+
+.hb_market { width: 100%; z-index: 998; position: fixed; top: 0; left: 0; background: @c-white; display: none; }
+
+
+.hb_body_overflow { overflow-x: hidden; overflow-y: hidden; }
+
+.hb_wrap_workspaces { overflow-y: hidden;
+	.hb_wrap {
+		.switch_workspaces { .switch_workspaces_on; }
+		/*
+		.hb_workspaces { top: 0; }
+		.switch_notice { top: 446px; }
+		.hb_header { top: 400px; }
+		.hb_main { margin-top: 510px; }
+		*/
+		.hb_mask { display: block; }
+	}
+	.hb_workspaces { visibility: visible; overflow-y: auto; }
+
+	.switch_workspaces:hover .ws_title { visibility: hidden!important; }
+}
+
+.hb_wrap_notice { overflow-y: hidden;
+	.hb_wrap {
+		.hb_main,.hb_app,.hb_header, .hb_setting { margin-left: -320px; margin-right: 320px; }
+		.hb_header .set { margin-right: 5px; 
+			.mod_avatar { border-right: none; }
+		}
+		.switch_workspaces { left: -300px; }
+		.switch_notice { z-index: 901;
+			.switch_notice_on;
+		}
+		.hb_notice { 
+			.notice_title, .notice_foot, .mod_notifications {
+				right: 0; 
+			}
+		}
+		.hb_mask { display: block; }
+
+		.setting_back { left: 0; right: 370px; }
+	}
+}
+
+.hb_nav_app {
+	// .hb_header .nav {
+	// 	h1 { top: -50px;
+	// 		span { font-size: 14px!important; color: @x-subtle; .animate; cursor: pointer;
+	// 			i { visibility: hidden!important; }
+	// 		}
+	// 	}
+
+	// 	h2 { top: -17px;
+	// 		span { font-size: 20px; color: @x-common; .opacity(100,1); .animate; }
+	// 	}
+	// }
+	.hb_app { top: 80px; .opacity(100,1); visibility: visible; }
+	.hb_main { display: none; }
+	.hb_setting { }
+}
+.hb_app_custom {
+	.hb_condition {
+		.custom_options { left: -200px!important; visibility: hidden!important; opacity: 0!important; }
+		.custom_specific { left: 0!important; visibility: visible!important; opacity: 1!important; }
+	}
+}
+
+.hb_wrap_item {  overflow-x: hidden; overflow-y: hidden;
+	.hb_item { display: block;
+		.hb_item_head { }
+		.hb_item_body { }
+		.hb_doc { }
+	}
+	.switch_workspaces { display: none; }
+}
+
+.hb_notice_item { 
+
+}
+
+.hb_wrap_headtips {
+	.hb_headtips { top: 0; }
+}
+
+
+.hb_wrap_daily { overflow-x: hidden; overflow-y: hidden;
+	.hb_daily { display: block; }
+	.switch_workspaces { display: none; }
+}
+
+/*
+.hb_nav_setting { background: #F9FAFB;
+
+	.hb_setting { height: auto!important;
+		.setting_back { bottom: 0px; visibility: visible; }
+	}
+	.hb_main { margin-top: 700px; visibility: hidden;
+		.mod_feedlist { overflow: hidden; height: 500px; }
+	}
+	&.hb_wrap_workspaces {
+		.hb_setting .setting_back { visibility: hidden; }
+	}
+}*/
+
+.hb_setting_workspace {
+	.hb_setting { 
+		.setting_back { bottom: 0px; visibility: visible; }
+		.hb_close { display: block; }
+		.hb_cancel { display: block; }
+
+	}
+	/*
+	.hb_main { margin-top: 700px; visibility: hidden;
+		.mod_feedlist { overflow: hidden; height: 500px; }
+	}
+	*/
+	&.hb_wrap_workspaces {
+		.hb_setting .setting_back { visibility: hidden; }
+	}
+	.hb_setting { overflow: visible;
+		.set-workspace {}
+		.set-app { display: none; }
+		.set-excel { display: none; }
+		.set-excel-app { display: none; }
+	}
+
+	.switch_workspaces, .switch_notice, .hb_header .set { display: none; }
+
+}
+.hb_setting_app {
+	.hb_setting { 
+		.setting_back { bottom: 0px; visibility: visible; }
+		.hb_close { display: block; }
+		.hb_cancel { display: block; }
+	}
+	.hb_app { margin-top: 700px; visibility: hidden;
+	
+	}
+	.hb_setting { overflow: visible;
+		.set-workspace { display: none; }
+		.set-app {  }
+		.set-excel { display: none; }
+		.set-excel-app { display: none; }
+	}
+
+	.hb_header { cursor: auto;
+		.nav_back, h1, h2, h3 { cursor: auto; }
+	}
+	.hb_header .nav h1 span { cursor: auto; }
+
+	.switch_workspaces, .switch_notice, .hb_header .set { display: none; }
+}
+
+/* 临时 过场样式 */
+	.s-excel {
+		.set-workspace { display: none!important; }
+		.set-app { display: none!important; }
+		.set-excel { display: block!important; }
+		.set-excel-app { display: none!important; }
+	}
+	.s-excel-app {
+		.set-workspace { display: none!important; }
+		.set-app { display: none!important; }
+		.set-excel { display: none!important; }
+		.set-excel-app { display: block!important; }
+	}
+/* end */
+
+
+.hb_wrap_item_edit {
+	.hb_item { display: none; }
+	.hb_item_edit { display: block; }
+
+}
+
+
+/* 过场动画 */
+
+	/* movedown */
+	.movedown-enter {
+	  transition-duration: .5s;
+	  transition-property: opacity;
+	  transition-timing-function: ease-out;
+	  opacity: 0;
+	}
+	.movedown-enter.movedown-enter-active {
+	  opacity: 1;
+	}
+	.movedown-leave {
+	  transition-duration: .5s;
+	  transition-property: transform, opacity;
+	  transition-timing-function: ease-out;
+	  transform: translate3d(0, 0, 0);
+	  opacity: 1;
+	}
+	.movedown-leave.movedown-leave-active {
+	  transform: translate3d(0, 100%, 0);
+	  opacity: 0;
+	}
+
+
+	/* moveup */
+	.moveup-enter {
+	  transition-duration: .5s;
+	  transition-property: transform;
+	  transition-timing-function: ease-out;
+	  transform: translate3d(0, 100%, 0);
+	  z-index: 999;
+	}
+	.moveup-enter.moveup-enter-active {
+	  transform: translate3d(0, 0, 0);
+	}
+	.moveup-leave {
+	  transition-duration: 1.5s;
+	  transition-property: opacity;
+	  transition-timing-function: ease-out;
+	  opacity: 1;
+	}
+	.moveup-leave.moveup-leave-active {
+	  opacity: 0;
+	}
+
+
+
+
+
+

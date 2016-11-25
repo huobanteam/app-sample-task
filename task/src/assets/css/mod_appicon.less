@@ -1,0 +1,38 @@
+.mod_appiconbody { text-align: center;
+	.mod_appiconlist { display: inline; }
+}
+
+.mod_appicon { display: inline-block; text-align: center; position: relative;
+	i { .z; background: @c-white; font-size: 16px; width: 16px; height: 16px; line-height: 16px; text-align: center;
+		&.appcolor_o { display: block; margin: 0 auto; width: 40px; height: 40px; line-height: 40px; font-size: 24px; }
+	}
+	span { .z; margin-left: 5px; font-size: 12px; word-break:break-all; }
+	em.new { position: absolute; right: 18px; top: 0px; display: block; width: 9px; height: 9px; background: #108DD0; border: 2px solid @c-white; border-radius: 100px; }
+}
+
+.mod_appiconlist { .listStyle;
+	li { .z; width: 80px; margin-bottom: 15px; position: relative;
+		.mod_appicon { display: block; cursor: pointer; 
+			i { float: none; display: block; margin: 0 auto; width: 40px; height: 40px; line-height: 40px; font-size: 24px; }
+			span { float: none; display: block; margin-top: 8px; margin-left: 0; height: 18px; overflow: hidden; text-align: center; white-space: nowrap; text-overflow: ellipsis; }
+		}
+		em.drop { display: none;  position: absolute; right: 3px; top: 29px; border: 1px solid @bd-subtle; width: 13px; height: 13px; line-height: 13px; text-align: center; border-radius: 100px; cursor: pointer;
+			i { .hbicon; top: 1px; left: 1px; color: @x-slate; }
+		}
+		&:hover {
+			em.drop { display: block;
+				&:hover { border: 1px solid @x-slate; }
+			}
+		}
+	}
+	&.ai_nav { text-align: center;
+		li { display: inline-block; vertical-align: top; float: none;
+			&:hover span { color: @x-link; }
+			.mod_appicon span { height: 36px; white-space: normal; }
+
+		}
+	}
+	&.ai_list { 
+
+	}
+}

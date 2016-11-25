@@ -1,0 +1,27 @@
+@media print {
+	body {width: 100%; margin: 0; padding: 0; color: #000; background: #fff; font-size: 12pt;}
+	@page { size: A4; }
+	ul, img { page-break-inside: avoid; }
+	.hb_notice,.hb_appmenu, .hb_app, .hb_frame, .hb_item_side, .hb_mask, .hb_mask_item, .hb_header, .switch_workspaces, .switch_notice, .hb_feedback { display: none!important; }
+	.hb_item_body { position: static!important; }
+	.hb_item_meta .action { display: none; }
+	.hb_item_head {
+	.ybox, .back, .app_icon { display: none; }
+	}
+
+	.hb_doc, .hb_item_meta, .mod_separator {  margin: 0!important; width: auto!important; }
+
+	.hb_item_table { padding-bottom: 0; border-top: none; }
+	.item_row { border: none; }
+	.item_field{ background: #F8FAFE; border-bottom: 1px solid #eeecec; }
+	.item_field_label { padding: 14px 0; }
+	.hb_item_head .title { margin: 0!important; }
+	.hb_item_head .title h1 { padding-right: 160px; }
+	.hb_doc_scroll, .hb_wrap_item { height: auto!important; overflow-x: auto!important; overflow-y: auto!important }
+	#MEIQIA-BTN-HOLDER { display: none!important; }
+
+
+}
+@media print and (color) {
+   * { -webkit-print-color-adjust: exact;  print-color-adjust: exact; }
+}

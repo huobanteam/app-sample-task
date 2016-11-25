@@ -1,0 +1,49 @@
+/* 卡片 */
+.tip_card { background-color: @bg-slate; width: 300px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); box-sizing: border-box; z-index: 3;
+	/*&:after { content: '\e611'; .hbicon; font-size: 20px; line-height: 20px; color: @bg-canvas; text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.1);  position: absolute; top: -13px; left: 20px; }*/
+	.tip_card_head { padding-left: 70px; height: 36px; border-bottom: 1px solid @bd-subtle; 
+		i { .hbicon; color: @x-slate; }
+		.icon { .z; margin: 10px 0 0 -60px; width: 48px; height: 48px; line-height: 48px; border: 1px solid @x-slate; box-sizing: border-box; .radius(30px); background: @c-white; color: @x-slate; font-size: 30px; }
+		span { .z; margin: 10px 0 0 -60px; width: 48px; height: 48px; }
+		strong { .z; line-height: 36px; font-weight: 400; font-size: 14px; }
+		em { .y; margin: 4px 10px 0 0;
+			i { font-size: 18px; }
+		}
+	}
+	.tip_card_content { padding: 0 0 15px 70px; background: @c-white;
+		.card_invite { padding: 25px 0;
+			i { .hbicon; top: 1px; font-size: 14px; margin-right: 5px; color: @x-slate; }
+			.pipe { color: #CCC; font-size: 12px; }
+			em { font-size: 12px; }
+			span { color: @x-subtle; font-size: 12px; }
+			a { color: @x-link; font-size: 12px; }
+		}
+		// .card_invite { padding: 15px 0;
+		// 	dt {
+		// 		i { .hbicon; top: 1px; font-size: 14px; margin-right: 5px; color: @x-slate; }
+		// 	}
+		// 	dd { padding: 5px 0 0 19px;
+		// 		a { color: @x-link; }
+		// 		em { margin-left: 5px; color: @x-subtle; }
+		// 	}
+		// }
+		p { padding-top: 15px; font-size: 14px; color: @x-subtle; }
+		.mod_avatarlist { padding-top: 15px;
+			li { 
+				i { margin-right: 5px; display: block; .hbicon; width: 20px; line-height: 20px; height: 20px; text-align: center; background: @bg-canvas; .radius (30px); }
+				&.num { margin-right: 5px; width: 56px; line-height: 20px; height: 20px; background: @bg-canvas; .radius (30px); text-align: center; }
+			}
+		}
+		.userinfo { padding: 15px 0 10px 0; .listStyle;
+			li { height: 24px; line-height: 24px; overflow: hidden; color: @x-mid;
+				i { .hbicon; margin-right: 5px; top: 1px; font-size: 14px; color: @x-slate; }
+				&.duties { padding: 0 0 5px 0; font-size: 14px; color: @x-subtle; }
+			}
+		}
+		.btn { margin-top: 10px;
+			.spn:hover { border: 1px solid @x-link; color: @x-link!important;
+				i { color: @x-link; }
+			}
+		}
+	}
+}

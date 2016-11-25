@@ -1,0 +1,103 @@
+.mod_formula { }
+
+.formula_title { padding: 8px 0;
+	p { padding: 5px 0; overflow: hidden;
+		strong { font-weight: 400; }
+		em { .y;
+			i { .hbicon; margin-right: 3px; top: 1px; color: #008ED2; font-size: 14px; }
+			a { color: #008ED2!important; }
+		}
+	}
+}
+
+.formula_form + .formula_title { margin-top: 10px; }
+
+.formula_form { padding: 10px;  border: 1px solid @bd-common; box-sizing: border-box; height: 130px; overflow-y: auto; background: @c-white; box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+	cite, em, span { display: inline-block; height: 22px; line-height: 22px; box-sizing: border-box; overflow: hidden; }
+
+	cite { padding: 0 5px; border: 1px solid @bd-subtle; background-color: #FCFCFD; cursor: pointer;
+		&.hover { background-color: #F2F6FF; }
+		i { .appicon; color: #008ED2; position: relative; top: 0px; margin-right: 3px; }
+		strong { font-weight: 400; }
+		label, u, small { position: relative; top: -1px; vertical-align: baseline; font-size: 12px; }
+		label { }
+		u { margin: 0 3px; text-decoration: none; }
+		small { color: #9F9F9F; }
+		i + strong { position: relative; top: -1px; }
+	}
+	em { color: #1FB05C; }
+	span {}
+}
+.formula_option { padding: 10px; background-color: #F2F6FF; border: 1px solid @bd-common; height: 130px; overflow-y: auto; 
+	&.empty { background-color: #ECECEC; text-align: center; line-height: 130px; color: #9F9F9F; }
+	.option_item { margin-bottom: 10px;
+		label, .option, .del { border: 1px solid #D5D5D5; border: 1px solid #D5D5D5; height: 30px; line-height: 30px; background-color: #FFF;}
+
+		label { .z; width: 5%; border-right: none; text-align: center; color: #9F9F9F; background-color: #ECECEC;
+			&.operator { width: 15%; text-align: left; position: relative; background-color: #FFF; color: @x-common; cursor: pointer; 
+				&:after { content: '\e64c'; .hbicon; position: absolute; right: 10px; color: #9F9F9F; }
+				span { padding: 0 5px 0 10px; }
+			}
+		}
+		.option { .z; width: 37%; border-right: none; position: relative; cursor: default; color: @x-common;
+			.value {
+				span { padding: 0 5px 0 10px; }
+			}
+		
+			.v_data, .v_data_row, .mod_time { padding-left: 10px; width: 45%; display: inline-block; box-sizing: border-box;
+				i { .hbicon; margin-right: 3px; }
+				
+				span { padding: 0; }
+				input { padding: 0; margin: 0; width: 100%; border: 0; box-sizing: border-box;
+					&.d_date { padding-left: 18px; .bgIcon(0px,49%,no-repeat,13px,@file:icon_date,@color:#FFFFFF); }
+				}
+
+				.d_unit { padding-right: 30px;
+					em {  .y; margin-right: -30px; width: 30px; text-align: center; background-color: #F2F6FF; }
+					input { padding-right: 5px; width: 100%; }
+				}
+			}
+			.v_data_row { width: 100%;
+				.d_unit {
+					
+				}
+			}
+
+			.mod_time {
+				.v_data { padding: 0; width: 100%; }
+			}
+
+			.v_line { width: 10%; display: inline-block; box-sizing: border-box; text-align: center; }
+			.placeholder { width: 100%; color: #9F9F9F; box-sizing: border-box; }
+			.input { padding: 0 10px; width: 100%; box-sizing: border-box;
+				input { border: none; width: 100%; padding: 0; margin: 0; }
+			}
+		}
+		.select { padding-right: 26px; width: 100%; height: 30px; line-height: 30px; position: relative; background-color: #FFF; cursor: pointer; .text_ellipsis; box-sizing: border-box;
+			&:after { content: '\e64c'; .hbicon; position: absolute; right: 10px; color: #9F9F9F; }
+			span { padding: 0 5px 0 10px;
+				span { padding: 0; }
+			}
+			.placeholder { color: #9F9F9F; }
+
+			.mod_appicon {
+				i.appcolor { margin-top: 6px; }
+				span { margin: 0; }
+			}
+		}
+		.disabled { cursor: default!important; background-color: #ECECEC!important; color: #9F9F9F!important; }
+		.del { .z; width: 5%; text-align: center; background-color: #ECECEC; cursor: pointer;
+			i { .hbicon; color: #CF5C60; font-size: 16px; }
+		}
+	}
+}
+
+
+.field_option dd {
+	.formula_form { padding: 1px; border: 0; height: auto; overflow-y: hidden; box-shadow: none;
+		cite, em, span { height: auto; line-height: 14px; }
+		cite { border: none; background-color: #FFF; }
+	}
+
+}
+

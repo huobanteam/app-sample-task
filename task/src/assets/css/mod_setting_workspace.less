@@ -1,0 +1,105 @@
+.setting_workspace { padding: 20px 0;
+	fieldset { border: none; margin: 0 0 20px 0; padding: 0;
+		legend { margin-bottom: 15px; padding: 10px 0; width: 100%; border-bottom: 1px solid @bd-subtle; font-size: 14px; color: @x-subtle;
+			strong { font-weight: 700; color: @x-common; }
+			
+			/**
+			.manage_search { .y; margin-top: -8px; padding:0 10px; border:1px solid  @bd-subtle; .radius(28px); height: 28px; line-height: 28px;
+				i { .ficon; .z; top: 0; left: 0; }
+				.px { .z; width: 180px; border: 0; box-shadow: none; }
+			} 
+			**/
+		}
+		.mod_appiconlist, .mod_avatarlist {
+			li { padding: 5px; border: 1px solid rgba(0, 0, 0, 0);
+				&:hover { border: 1px solid rgba(0, 0, 0, 0.1); border-radius: 3px; cursor: pointer;
+					.drop { display: inline-block; }
+				}
+				&.move { border: 1px dotted rgba(0, 0, 0, 0.1); border-radius: 3px; cursor: move;
+					.drop { display: inline-block; }
+				}
+				.drop { display: none; margin-right: -5px; padding: 0px 6px; .hbicon; color: @x-slate; cursor: pointer; z-index: 1;
+					&:hover { color: @x-link; }
+				}
+				
+				&.hb_add i { .hbicon; border: 1px dashed @bd-common; .radius(30px); }
+			}
+		}
+
+
+		table.setting_form { width: 70%; font-size: 14px;
+			th, td { padding: 8px 0; }
+			th { padding-top: 15px; padding-right: 20px; width: 126px; text-align: right; vertical-align: top; }
+			td {
+				.px { line-height: 22px; font-size: 14px;
+					&.z { margin-right: 20px; width: 300px; }
+				}
+				.px_code { width: 120px; .z; }
+				.pn_code { width: 120px; margin-left: 10px; padding-left: 5px; padding-right: 5px; }
+
+				p { margin-top: 7px;
+					label { margin-right: 20px; }
+					a.edit { margin-left: 10px; color: @x-link!important; }
+				}
+				.cancel { color: @x-subtle; margin-left: 20px; }
+			}
+		}
+
+		dl { margin-bottom: 5px;
+			dt { .z; padding-right: 20px; width: 146px; text-align: right; font-size: 14px; font-weight: 400; box-sizing: border-box;
+				strong { margin-top: 5px; display: block; font-weight: 400; }
+			}
+			dd { overflow: hidden; zoom: 1; border-bottom: 1px solid @bd-subtle; 
+				.addapp { .z; margin: 0 5px 5px 0; padding: 10px 0; width: 80px; text-align: center; border: 1px solid rgba(0, 0, 0, 0);
+					a {
+						i { display: block; margin: 0 auto; .hbicon; border: 1px dotted @x-slate; color: @x-slate; width: 40px; height: 40px; line-height: 40px; font-size: 32px; text-align: center; .radius; }
+						span { display: block; margin-top: 8px; color: @x-common; }
+					}
+				}
+			}
+			&:last-child dd { border: none; }
+		}
+
+		.delbody { padding-left: 80px;
+			p { margin-bottom: 5px; font-size: 14px;
+				a { color: @x-link; }
+				&.info { color: @x-subtle; font-size: 12px; }
+			}
+		}
+
+		.set_add { padding-top: 7px;
+			a { color: @x-link;
+				i { .hbicon; color: @x-link; margin-right: 4px; }
+			}
+			.adduser { color: @x-link;
+				i { .hbicon; color: @x-link; margin-right: 4px; }
+			}
+			.pipe { margin: 0 10px; color: @x-subtle; }
+		}
+
+
+		.mod_avatarlist {
+			li { margin-bottom: 10px; width: 108px; margin-right: 5px;
+				.mod_avatar span { width: 63px; }
+				.drop { .y; margin-top: 0px; }
+			}
+		}
+
+		.mod_appiconlist { .z;
+			li { position: relative; margin: 0 5px 5px 0; padding: 10px 0;
+				.drop { position: absolute; top: 2px; right: 2px; }
+			}
+			/*
+			li { position: relative; .z; display: block;  text-align: center;
+				i { margin: 10px auto 12px; display: block; width: 42px; height: 42px; line-height: 40px; font-size: 22px; -webkit-transition: all .2s; }
+				&:hover i { font-size: 24px; }
+				cite { position: absolute; top: 2px; right: 2px; }
+				p { overflow: hidden; white-space: nowrap; -o-text-overflow: ellipsis; text-overflow: ellipsis; }
+			}
+			*/
+
+		}
+
+		hr { margin: 12px 0 20px 0; border-top: 1px solid @bd-subtle; }
+	}
+}

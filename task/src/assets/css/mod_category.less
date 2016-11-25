@@ -1,0 +1,52 @@
+.mod_category { display: inline-block;
+
+	
+
+	&.catcolor_o { padding: 0 15px; height: 30px; line-height: 30px; .radius (3px);
+		&.color_a, &.color_b, &.color_c, &.color_d, &.color_e, &.color_f, &.color_g, &.color_h, &.color_i, &.color_j, &.color_k, &.color_l, &.color_m, &.color_n, &.color_o, &.color_p, &.color_z { color: @c-white; border: none; }
+	}
+	&.catcolor_i { padding: 0; color: @x-common; border: none; background: none;
+		&.color_a:before { .color_a; border: none; background: none; }
+		&.color_b:before { .color_b; border: none; background: none; }
+		&.color_c:before { .color_c; border: none; background: none; }
+		&.color_d:before { .color_d; border: none; background: none; }
+		&.color_e:before { .color_e; border: none; background: none; }
+		&.color_f:before { .color_f; border: none; background: none; }
+		&.color_g:before { .color_g; border: none; background: none; }
+		&.color_h:before { .color_h; border: none; background: none; }
+		&.color_i:before { .color_i; border: none; background: none; }
+		&.color_j:before { .color_j; border: none; background: none; }
+		&.color_k:before { .color_k; border: none; background: none; }
+		&.color_l:before { .color_l; border: none; background: none; }
+		&.color_m:before { .color_m; border: none; background: none; }
+		&.color_n:before { .color_n; border: none; background: none; }
+		&.color_o:before { .color_o; border: none; background: none; }
+		&.color_p:before { .color_p; border: none; background: none; }
+		&.color_z:before { .color_z; border: none; background: none; }
+
+
+
+		&:before { content: "\e60e"; .hbicon; font-weight: 700!important; margin-right: 5px;}
+	}
+
+	.drop { margin: 0px -15px 0 10px; .y; .hbicon; cursor: pointer; background: rgba(255, 255, 255, 0.1); width: 20px; text-align: center; }
+}
+
+.mod_categorylist { .listStyle;
+	li { .z; margin: 0 15px 9px 0;
+		.mod_category {
+			.del { display: none; margin: 0px -15px 0 7px; .y; .hbicon; font-size: 12px; cursor: pointer; background: rgba(255, 255, 255, 0.1); width: 20px; text-align: center; }
+		}
+		&:hover { margin-right: 3px;
+			.mod_category {
+				.del { display: block; }
+			}
+		}
+	}
+	&.style_list {
+		li { cursor: pointer;
+			&:hover { margin-right: 15px; }
+			&.current {  }
+		}
+	}
+}

@@ -1,0 +1,13 @@
+body, input, button, select, textarea { font:12px/1.5 'Lucida Grande', 'Lucida Sans Unicode', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft Yahei', sans-serif; color: @x-common; }
+body, ul, ol, li, dl, dd, p, h1, h2, h3, h4, h5, h6, form { margin: 0; padding: 0; }
+// body { overflow-x: hidden; }
+table { empty-cells: show; border-collapse: collapse; }
+	caption, th { text-align: left; font-weight: 400; }
+em, cite, i { font-style: normal; }
+a { color: @x-common; text-decoration: none; outline: none;
+	img { border: none; }
+	&:hover { color: @x-link!important; }
+	&:active {star:~"expression(this.onFocus=this.blur())";}
+}
+:focus { outline:0; }
+textarea { resize: none; }

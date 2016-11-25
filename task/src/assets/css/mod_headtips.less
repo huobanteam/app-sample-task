@@ -1,0 +1,13 @@
+.hb_headtips { position: fixed; top: 0; right: 0; left: 0; height: 79px; background: @c-white; z-index: 1000; .animate;
+	p { text-align: center; line-height: 79px; font-size: 18px;
+		&.error { color: @colorRed; }
+		&.warning { color: @colorYellow; }
+		&.info { color: @bg-action; }
+	}
+	&.hb_headtips_hide { top: -79px; }
+}
+
+.hb_close { position: absolute; right: 16px; top: 26px; display: block; width: 32px; height: 32px; line-height: 32px; text-align: center; .radius; cursor: pointer;
+	i { .hbicon; font-size: 32px; color: @x-slate; font-weight: 100!important; }
+	&:hover i { color: @x-link; }
+}

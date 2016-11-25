@@ -1,0 +1,87 @@
+.hb_example {
+  width: 900px;
+  margin: 0 auto;
+}
+.hb_example .example_table {
+  background: #F8FAFE;
+  /*偶数行*/
+}
+.hb_example .example_table .row_td,
+.hb_example .example_table .row_th,
+.hb_example .example_table .row_head {
+  padding: 20px 40px 20px 20px;
+  box-sizing: border-box;
+}
+.hb_example .example_table .row_th {
+  width: 25%;
+  border-right: 2px solid #FFF;
+}
+.hb_example .example_table .row_th .example_code {
+  margin-top: 10px;
+  display: none;
+}
+.hb_example .example_table .row_th .example_code textarea {
+  width: 170px;
+  height: 120px;
+}
+.hb_example .example_table .row_td .example_code {
+  margin-top: 10px;
+  display: none;
+}
+.hb_example .example_table .row_td .example_code textarea {
+  width: 650px;
+  height: 220px;
+}
+.hb_example .example_table .row_td .hb_dialog,
+.hb_example .example_table .row_td .tip_card {
+  position: static;
+  margin-bottom: 50px;
+}
+.hb_example .example_table .row_td .popover {
+  position: relative;
+}
+.hb_example .example_table .row_td .example_t {
+  color: #91B6AF;
+}
+.hb_example .example_table .row_td .example_n {
+  color: #F00;
+}
+.hb_example .example_table .row_td .hb_dialog {
+  position: static;
+  margin-bottom: 50px;
+}
+.hb_example .example_table .row_td .popover {
+  position: relative;
+  margin-bottom: 50px;
+  display: block;
+}
+.hb_example .example_table .row_td .tip_card {
+  position: static;
+  margin-bottom: 50px;
+}
+.hb_example .example_table .row:nth-of-type(even) {
+  background: #F1F4F9;
+}
+.hb_example .example_table thead .row_head {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  background: #373544;
+  color: #FFF;
+}
+.hb_example .example_table thead .row_head span {
+  font-size: 12px;
+  margin-left: 20px;
+  color: #ccc;
+}
+.hb_example .hb_example_menu {
+  position: fixed;
+  left: 50px;
+  top: 50px;
+  width: 120px;
+}
+.hb_example .hb_example_menu li {
+  line-height: 32px;
+  height: 32px;
+  font-size: 14px;
+}
